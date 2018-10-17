@@ -1,0 +1,6 @@
+flask
+pymongo
+rasa_nlu
+spacy
+sklearn_crfsuite
+#python -m spacy download en
