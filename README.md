@@ -47,10 +47,19 @@ You can test your model on ither command prompt or if you have Jupyter notebook,
 ## Starting server
 
 Start Server to connect to your configured communication chanel, Slack in this case.
+You can start the server with ither command line utility or start using bot/bot_listner.py
+
+### using Command line
 
 ```shell
 ./start_core.sh
 ```
+
+### using python
+
+```shell
+python bot/bot_listner.py
+````
 
 your server is started on port 5002
 Make your server accessible on the Internet so that Slack can communicate with it.

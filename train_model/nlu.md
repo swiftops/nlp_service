@@ -60,3 +60,9 @@
 - plot organization dashboard
 - show me my dashboard
 - what is the status of the project
+
+## intent:group-by-priority
+- Group by Priority
+
+## intent:group-by-item-type
+- Group by Item-type

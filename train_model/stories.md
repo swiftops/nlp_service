@@ -15,3 +15,11 @@
 ## say goodbye
 * goodbye
   - utter_goodbye
+
+## item priority
+* group-by-item-type
+  - utter_group-by-item-type
+
+## item type
+* group-by-priority
+  - utter_group-by-priority
