@@ -1,3 +1,5 @@
+[![Build Status](https://dev.azure.com/swiftops/swiftops/_apis/build/status/swiftops.nlp_service)](https://dev.azure.com/swiftops/swiftops/_build/latest?definitionId=2)
+
 # nlp_service
 
 NLP service for SwiftOps (Work-in-progress)
