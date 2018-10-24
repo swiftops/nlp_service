@@ -1,6 +1,7 @@
 flask
 pymongo
-rasa_nlu
+rasa_nlu[tensorflow]
+rasa_core
 spacy
 sklearn_crfsuite
 #python -m spacy download en

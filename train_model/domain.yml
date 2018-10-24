@@ -16,6 +16,7 @@ actions:
   - utter_dashboard
   - utter_goodbye
   - utter_happy
+  - utter_sad
   - utter_group-by-item-type
   - utter_group-by-priority
 
@@ -46,4 +47,7 @@ templates:
 
   utter_group-by-item-type:
   - text: "There are 4 ToDos and 5 defects"
+
+  utter_sad:
+  - text: "Cheer up budy, how may i help you?"
   
