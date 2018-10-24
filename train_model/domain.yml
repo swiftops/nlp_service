@@ -7,6 +7,8 @@ intents:
   - mood_deny
   - mood_great
   - mood_unhappy
+  - group-by-priority
+  - group-by-item-type
 
 actions:
   - utter_greet
@@ -14,6 +16,9 @@ actions:
   - utter_dashboard
   - utter_goodbye
   - utter_happy
+  - utter_sad
+  - utter_group-by-item-type
+  - utter_group-by-priority
 
 templates:
   utter_greet:
@@ -21,6 +26,11 @@ templates:
 
   utter_inbox:
   - text: "Your inbox count is 3"
+    buttons:
+    - title: "Group by Item-type"
+      payload: "Group by Item-type"
+    - title: "Group by Priority"
+      payload: "Group by Priority"
 
   utter_dashboard:
   - text: "Loding you dashboard"
@@ -31,4 +41,13 @@ templates:
 
   utter_happy:
   - text: "Great, carry on!"
+
+  utter_group-by-priority:
+  - text: "There are 2 Hight Priority Items and 4 Medium"
+
+  utter_group-by-item-type:
+  - text: "There are 4 ToDos and 5 defects"
+
+  utter_sad:
+  - text: "Cheer up budy, how may i help you?"
   

@@ -51,6 +51,7 @@
 
 ## intent:inbox
 - show me my inbox items
+- show me [high](priority) priority items in my inbox
 - what is there in my inbox
 - whats up
 - what should i do today
@@ -60,3 +61,14 @@
 - plot organization dashboard
 - show me my dashboard
 - what is the status of the project
+
+## intent:group-by-priority
+- Group by Priority
+
+## intent:group-by-item-type
+- Group by Item-type
+
+## lookup:priority
+- High
+- Critical
+- low
