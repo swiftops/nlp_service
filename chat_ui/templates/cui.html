@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='chatroom.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='index.css') }}">
+        <title>Chatroom Example</title>
+    </head>
+    <body>
+        <div class="chat-container"></div>
+        <script src="{{ url_for('static', filename='chatroom.js') }}"></script>
+        <script type="text/javascript">
+            window.chatroom = new window.Chatroom({
+                title: "Chat with a bot",
+                container: document.querySelector(".chat-container"),
+                welcomeMessage: "Nice to meet you.",
+                host: "http://localhost:5002",
+            });
+            window.chatroom.openChat();
+        </script>
+    </body>
+</html>
