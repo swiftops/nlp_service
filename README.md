@@ -4,9 +4,6 @@
 
 NLP service for SwiftOps (Work-in-progress)
 
-![alt text](https://pbs.twimg.com/profile_images/934851009309839360/U5PjXCDE_400x400.jpg "Work-In-Progress")
-
-
 # Getting started
 
 ## Prerequisites
@@ -25,7 +22,7 @@ Update following configuration files as per your dialog flow needs or start with
 * train_model/nlu.md
 
 Configure credentials for your prefered conversation channel
-Note; We have given example of Slack, more on the way
+Note; We have given example of Slack, as well as Bot UI, more on the way
 * train_model/credentials.yml
 
 ## Training 
@@ -44,7 +41,7 @@ You can test your model on ither command prompt or if you have Jupyter notebook,
 ./train_model/test_bot.sh
 ```
 
-## Starting server
+## Starting rasa_core server
 
 Start Server to connect to your configured communication chanel, Slack in this case.
 You can start the server with ither command line utility or start using bot/bot_listner.py
@@ -58,8 +55,8 @@ You can start the server with ither command line utility or start using bot/bot_
 ### using python
 
 ```shell
-python bot/bot_listner.py
-````
+python service.py
+```
 
 your server is started on port 5002
 Make your server accessible on the Internet so that Slack can communicate with it.
@@ -71,3 +68,13 @@ ngrok http 5002
 
 Configure Forwarding url in Slack API.
 open your slack client and enjoy your conversation.
+
+## Starting Conversation UI
+
+### using python
+
+```shell
+python chat_ui/conversation_interface.py
+```
+
+your CUI server is started on port 8080
