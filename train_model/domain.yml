@@ -9,6 +9,20 @@ intents:
   - mood_unhappy
   - group-by-priority
   - group-by-item-type
+  - release
+  - change
+  - files_modified
+  - jenkins jobs
+  - performance
+  - sahifailedsummary
+  - junitresult
+  - connectionleak
+  - sonar
+  - release_num
+
+entities:
+  - release_no
+  - build_no
 
 actions:
   - utter_greet
@@ -19,6 +33,12 @@ actions:
   - utter_sad
   - utter_group-by-item-type
   - utter_group-by-priority
+  - utter_release
+  - utter_release_num
+  - utter_sonar
+  - utter_jenkins
+  - utter_connectionleak
+  - get_release
 
 templates:
   utter_greet:

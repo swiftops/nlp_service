@@ -64,6 +64,9 @@
 
 ## intent:group-by-priority
 - Group by Priority
+## intent:release_num
+- [4.0.0](release_no) [5](build_no)
+- release [4.6.0](release_no) build [8](build_no)
 
 ## intent:group-by-item-type
 - Group by Item-type
@@ -71,4 +74,52 @@
 ## lookup:priority
 - High
 - Critical
-- low
+- low## intent:release
+- show me release [4.6.9](release_no) build [4](build_no) info
+- what is the status of release [5.0.0](release_no) and build [9](build_no)
+- get me release [4.5.6](release_no) build [10](build_no) status
+- show me release [4.5.6](release_no) and build [33] data
+
+## intent:change
+- how many files has been changed
+- total files affected
+
+## intent:files_modified
+- show me files modified
+- list me files changed
+
+## intent:build
+- what is the build status
+- show me build information
+
+## intent:jenkins jobs
+- fire job
+- run jenkins job
+
+## intent:performance
+- perf report
+- show performance report
+
+## intent:sahifailedsummary
+- failed sahi result
+- show me automation result
+
+## intent:register
+- register jenkins job
+
+## intent:junitresult
+- show junit result
+- get junit reports
+
+## intent:sonar
+- show me code quality
+- code quality report
+
+## intent:connectionleak
+- is there any connnection leak
+
+## regex:release_no
+- (\d+)\.(\d+)\.(\d+)
+
+## regex:build_no
+- (\d+)
