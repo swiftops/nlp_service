@@ -11,11 +11,12 @@
         <div class="chat-container"></div>
         <script src="{{ url_for('static', filename='chatroom.js') }}"></script>
         <script type="text/javascript">
+            var url = window.location.search.substring(5);
             window.chatroom = new window.Chatroom({
                 title: "Chat with a bot",
                 container: document.querySelector(".chat-container"),
                 welcomeMessage: "Nice to meet you.",
-                host: "http://localhost:5003",
+                host: url,
             });
             window.chatroom.openChat();
         </script>
