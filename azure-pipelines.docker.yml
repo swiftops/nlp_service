@@ -16,7 +16,7 @@ steps:
 - script: |
     docker pull rasa/rasa_core
     docker build -t digite/rasa_core -f Dockerfile_core .
-    docker run --rm -v $(Build.ArtifactStagingDirectory)/nlp_service/models:/app/projects digite/rasa_core run python -m rasa_core.train -d /app/train_model/domain.yml -s /app/train_modeltrain_model/stories.md -o /app/projects/dialogue
+    docker run --rm -v $(Build.ArtifactStagingDirectory)/nlp_service/models:/app/projects digite/rasa_core run python -m rasa_core.train -d /app/train_model/domain.yml -s /app/train_model/stories.md -o /app/projects/dialogue
   displayName: 'train_dialogue'
 
 - script: |
