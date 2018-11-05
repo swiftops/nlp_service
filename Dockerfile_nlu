@@ -1,5 +1,7 @@
 FROM rasa/rasa_nlu:0.13.7-full
 
+MAINTAINER Deepak Naik "deenaik@gmail.com"
+
 ENV RASA_NLU_DOCKER="YES" \
     RASA_NLU_HOME=/app \
     RASA_NLU_PYTHON_PACKAGES=/usr/local/lib/python3.6/dist-packages

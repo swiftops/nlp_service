@@ -1,5 +1,7 @@
 FROM rasa/rasa_core
 
+MAINTAINER Deepak Naik "deenaik@gmail.com"
+
 SHELL ["/bin/bash", "-c"]
 
 WORKDIR /app
