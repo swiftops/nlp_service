@@ -1,0 +1,21 @@
+FROM rasa/rasa_nlu:0.13.7-full
+
+ENV RASA_NLU_DOCKER="YES" \
+    RASA_NLU_HOME=/app \
+    RASA_NLU_PYTHON_PACKAGES=/usr/local/lib/python3.6/dist-packages
+
+WORKDIR ${RASA_NLU_HOME}
+
+COPY . ${RASA_NLU_HOME}
+
+RUN pip install service-identity
+
+COPY training_set/nlu_config.yml ${RASA_NLU_HOME}/config.yml
+
+VOLUME ["/app/projects", "/app/logs", "/app/data"]
+
+EXPOSE 5000
+
+ENTRYPOINT ["./entrypoint.sh"]
+
+CMD ["start", "-c", "config.yml", "--path", "/app/projects"]

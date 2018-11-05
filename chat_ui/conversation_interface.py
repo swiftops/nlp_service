@@ -1,10 +1,18 @@
+"""Starts web server, sets URL and renders CUI."""
 from flask import Flask, render_template, url_for
 
 app = Flask(__name__)
 
 
+@app.route('/')
+def inbox_page():
+    """Page to set rasa core URL."""
+    return render_template('index.html')
+
+
 @app.route('/cui')
 def static_page():
+    """Actual page rendering CUI."""
     return render_template('cui.html')
 
 

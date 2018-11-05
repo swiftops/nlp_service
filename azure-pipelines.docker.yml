@@ -1,0 +1,32 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+pool:
+  vmImage: 'Ubuntu 16.04'
+
+steps:
+- script: |
+    docker pull rasa/rasa_nlu:latest-full
+    docker build -t digite/rasa_nlu -f Dockerfile_nlu .
+    docker run --rm -v $(Build.ArtifactStagingDirectory)/nlp_service/models:/app/projects digite/rasa_nlu run python -m rasa_nlu.train -c /app/train_model/nlu_config.yml --data /app/train_model/nlu.md -o /app/projects --fixed_model_name nlu --project current --verbose
+  displayName: 'train_nlu'
+
+- script: |
+    docker pull rasa/rasa_core
+    docker build -t digite/rasa_core -f Dockerfile_core .
+    docker run --rm -v $(Build.ArtifactStagingDirectory)/nlp_service/models:/app/projects digite/rasa_core run python -m rasa_core.train -d /app/train_model/domain.yml -s /app/train_modeltrain_model/stories.md -o /app/projects/dialogue
+  displayName: 'train_dialogue'
+
+- script: |
+    docker pull ubuntu:16.04
+    docker build -t digite/chat_ui -f Dockerfile_chat .
+  displayName: 'build_chat_ui'
+
+- script: |
+    docker login -u $(dockerId) -p $(pswd)
+    docker push digite/rasa_nlu
+    docker push digite/rasa_core
+    docker push digite/chat_ui
+  displayName: 'publish'

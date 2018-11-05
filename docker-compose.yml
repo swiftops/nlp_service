@@ -1,0 +1,29 @@
+version: "2"
+
+services:
+  
+  nlp_service:
+    image: digite/rasa_core
+    networks:
+      - botnet
+    restart: always
+    command: --smallfiles
+    ports:
+      - "5005:5005"
+    volumes:
+      - mongodata:/data/db
+  
+  chat_ui:
+    image: digite/chat_ui
+    depends_on:
+      - nlp_service
+    networks:
+      - botnet
+    restart: always
+    ports:
+      - "8080:8080"
+
+networks:
+  botnet:
+volumes:
+  mongodata:

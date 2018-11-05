@@ -1,0 +1,19 @@
+FROM rasa/rasa_core
+
+SHELL ["/bin/bash", "-c"]
+
+WORKDIR /app
+
+COPY . .
+
+RUN pip install service-identity configparser sklearn_crfsuite
+
+COPY training_set/nlu_config.yml ${RASA_NLU_HOME}/config.yml
+
+VOLUME ["/app/model", "/app/config", "/app/project"]
+
+EXPOSE 5005
+
+ENTRYPOINT ["./entrypoint.sh"]
+
+CMD ["start", "-c", "config.yml", "--path", "/app/projects"]
