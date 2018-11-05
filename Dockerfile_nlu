@@ -10,7 +10,7 @@ COPY . ${RASA_NLU_HOME}
 
 RUN pip install service-identity
 
-COPY training_set/nlu_config.yml ${RASA_NLU_HOME}/config.yml
+COPY train_model/nlu_config.yml ${RASA_NLU_HOME}/config.yml
 
 VOLUME ["/app/projects", "/app/logs", "/app/data"]
 
