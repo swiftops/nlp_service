@@ -64,6 +64,7 @@
 
 ## intent:group-by-priority
 - Group by Priority
+
 ## intent:release_num
 - [4.0.0](release_no) [5](build_no)
 - release [4.6.0](release_no) build [8](build_no)
@@ -74,7 +75,9 @@
 ## lookup:priority
 - High
 - Critical
-- low## intent:release
+- low
+
+## intent:release
 - show me release [4.6.9](release_no) build [4](build_no) info
 - what is the status of release [5.0.0](release_no) and build [9](build_no)
 - get me release [4.5.6](release_no) build [10](build_no) status
@@ -117,7 +120,7 @@
 
 ## intent:connectionleak
 - is there any connnection leak
-
+- show me the connection leaks
 ## regex:release_no
 - (\d+)\.(\d+)\.(\d+)
 

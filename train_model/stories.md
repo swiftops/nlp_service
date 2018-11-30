@@ -12,22 +12,18 @@
 * change
   - utter_release
 
-  
 ## files modified
 * files_modified
   - utter_release
 
-  
 ## jenkins jobs
 * jenkins jobs
   - utter_jenkins
 
-  
 ## performance
 * performance
   - utter_release
 
-  
 ## sahi failed summary
 * sahifailedsummary
   - utter_release
