@@ -33,12 +33,18 @@ train models using folling command
 ./train_model/train.sh
 ```
 
-## Testing
+## Testing (Optional)
 
 You can test your model on ither command prompt or if you have Jupyter notebook, use train_model/test.ipynb
 
 ```shell
 ./train_model/test_bot.sh
+```
+
+## Starting Action Server
+
+```shell
+python -m rasa_core_sdk.endpoint --actions actions
 ```
 
 ## Starting rasa_core server
