@@ -1,0 +1,10 @@
+FROM python:3-jessie
+WORKDIR /usr/src/app
+COPY actions.py requirements.txt ./
+RUN pip install  -r requirements.txt
+RUN python -m spacy download en
+COPY action_run.sh ./
+EXPOSE 5055
+RUN chmod +x /usr/src/app/action_run.sh
+ENTRYPOINT ["/bin/bash"]
+CMD ["action_run.sh"]

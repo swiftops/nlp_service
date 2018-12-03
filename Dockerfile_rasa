@@ -1,0 +1,14 @@
+FROM python:3-jessie
+WORKDIR /usr/src/app
+RUN mkdir -p  /usr/src/app/train_model
+COPY start_core.sh endpoints.yml requirements.txt ./
+RUN pip install  -r requirements.txt
+RUN python -m spacy download en
+COPY ./train_model/train.sh ./train_model/stories.md ./train_model/nlu_config.yml ./train_model/nlu.md ./train_model/domain.yml ./train_model/credentials.yml ./train_model/
+RUN chmod +x /usr/src/app/train_model/train.sh
+RUN chmod +x /usr/src/app/start_core.sh
+RUN sh ./train_model/train.sh
+EXPOSE 5002
+ENTRYPOINT ["/bin/bash"]
+CMD ["start_core.sh"]
+
