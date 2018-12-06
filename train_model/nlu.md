@@ -61,9 +61,6 @@
 - show me my dashboard
 - what is the status of the project
 
-## intent:release_num
-- [4.0.0](release_no) [5](build_no)
-- release [4.6.0](release_no) build [8](build_no)
 
 
 ## intent:release
@@ -71,14 +68,18 @@
 - what is the status of release [5.0.0](release_no) and build [9](build_no)
 - get me release [4.5.6](release_no) build [10](build_no) status
 - show me release [4.5.6](release_no) and build [33] data
+- [4.0.0](release_no) [5](build_no) (release)
+- release [4.6.0](release_no) build [8](build_no)
 
 ## intent:change
-- how many files has been changed
+- get me change log for release [4.0.0](release_no) build [1](build_no) 
+- info for build how many files has been changed
 - total files affected
+- show me changelog for release [4.0.0](release_no) build [1](build_no)
 
 ## intent:files_modified
-- show me files modified
-- list me files changed
+- show me files modified for release [4.0.0](release_no) build [1](build_no)
+- list me files changed for release [4.0.0](release_no) build [1](build_no)
 
 ## intent:build
 - what is the build status
@@ -108,7 +109,7 @@
 - code quality report
 
 ## intent:connectionleak
-- is there any connnection leak
+- is there any connnection leak for release [4.0.0](release_no) build [1](build_no)
 
 ## regex:release_no
 - (\d+)\.(\d+)\.(\d+)

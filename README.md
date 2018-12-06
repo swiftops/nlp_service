@@ -2,9 +2,10 @@
 
 # nlp_service
 
-NLP service for SwiftOps (Work-in-progress)
+NLP service for SwiftOps 
 
-![alt text](https://pbs.twimg.com/profile_images/934851009309839360/U5PjXCDE_400x400.jpg "Work-In-Progress")
+Rasa NLU is an open-source natural language processing tool for intent classification and entity extraction in chatbots.
+This service is used to implement rasa core nlu for chatops integration with slack.To read more [rasa nlu] (https://rasa.com/docs/nlu/)
 
 
 # Getting started
@@ -59,6 +60,17 @@ You need to download ngrok utility for the same.
 ```shell
 ngrok http 5002
 ```
+
+## Running action server
+
+* Custom action needs to run on a separate server. That server has to be configured in a 'endpoints.yml' file.    
+
+* Start the custom action server by running: 
+
+```shell
+python -m rasa_core_sdk.endpoint --actions actions.actions
+```
+
 
 Configure Forwarding url in Slack API.
 open your slack client and enjoy your conversation.

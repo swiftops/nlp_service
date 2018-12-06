@@ -1,7 +1,7 @@
 ## welcome message
 * greet
   - utter_greet
-
+  
 ## release info
 * release
   - get_release
@@ -14,12 +14,11 @@
 
 ## change files count
 * change
-  - utter_release
-
+  - get_release   
   
 ## files modified
 * files_modified
-  - utter_release
+  - get_release
 
   
 ## jenkins jobs
@@ -46,7 +45,7 @@
   
 ## connectionleak
 * connectionleak
- - utter_connectionleak
+ - get_release
  
 ## happy path
 * greet
@@ -65,3 +64,7 @@
 ## say goodbye
 * goodbye
   - utter_goodbye
+
+## fallback
+* release
+ - utter_default

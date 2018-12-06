@@ -21,6 +21,7 @@ intents:
 entities:
   - release_no
   - build_no
+  - release
 
 slots:
   release_no:
@@ -39,6 +40,7 @@ actions:
   - utter_jenkins
   - utter_connectionleak
   - get_release
+  - utter_default 
 
 templates:
   utter_hello:
@@ -62,3 +64,6 @@ templates:
   
   utter_release:
   - text: "Enter release and build number"
+  
+  utter_default:
+  - text: "Sorry, I didn't undersand :confused:"
