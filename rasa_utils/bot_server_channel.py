@@ -1,14 +1,9 @@
-from __future__ import absolute_import
-from __future__ import division
-from __future__ import print_function
-from __future__ import unicode_literals
-
 from collections import defaultdict
 from datetime import datetime
 import json
 import logging
 from uuid import uuid4
-from flask import Blueprint, jsonify, request, Flask, Response, make_response
+from flask import Blueprint, request, Response, make_response
 from flask_cors import CORS
 
 from rasa_core.channels.channel import UserMessage

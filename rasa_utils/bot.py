@@ -1,15 +1,9 @@
-from __future__ import absolute_import
-from __future__ import division
-from __future__ import print_function
-from __future__ import unicode_literals
-
 import argparse
 import logging
-from typing import Text, Optional, Union
 
 from rasa_core import constants, agent, utils
 from rasa_core.agent import Agent
-from rasa_core.channels import console, RestInput, BUILTIN_CHANNELS
+from rasa_core.channels import BUILTIN_CHANNELS
 from rasa_core.interpreter import NaturalLanguageInterpreter
 from rasa_core.utils import AvailableEndpoints
 from .bot_server_channel import BotServerInputChannel
