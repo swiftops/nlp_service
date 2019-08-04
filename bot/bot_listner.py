@@ -4,7 +4,7 @@ from rasa_core.agent import Agent
 from rasa_core.interpreter import RasaNLUInterpreter
 
 # load nlu trained model
-interpreter = RasaNLUInterpreter('train_model/models/current/nlu')  
+interpreter = RasaNLUInterpreter('train_model/models/current/nlu')
 # load swift-ent trained agent
 agent = Agent.load('train_model/models/dialogue', interpreter=interpreter)
 

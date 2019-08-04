@@ -3,27 +3,15 @@ from __future__ import division
 from __future__ import print_function
 from __future__ import unicode_literals
 
-from builtins import str
-from collections import namedtuple
-
 import argparse
 import logging
-from flask import Flask
-from flask_cors import CORS
-from gevent.pywsgi import WSGIServer
-from threading import Thread
-from typing import Text, Optional, Union, List
+from typing import Text, Optional, Union
 
-import rasa_core
-from rasa_core import constants, agent
-from rasa_core import utils, server
+from rasa_core import constants, agent, utils
 from rasa_core.agent import Agent
-from rasa_core.channels import (
-    console, RestInput, InputChannel,
-    BUILTIN_CHANNELS)
-from rasa_core.interpreter import (
-    NaturalLanguageInterpreter)
-from rasa_core.utils import read_yaml_file, AvailableEndpoints
+from rasa_core.channels import console, RestInput, BUILTIN_CHANNELS
+from rasa_core.interpreter import NaturalLanguageInterpreter
+from rasa_core.utils import AvailableEndpoints
 from .bot_server_channel import BotServerInputChannel
 
 logger = logging.getLogger()  # get the root logger

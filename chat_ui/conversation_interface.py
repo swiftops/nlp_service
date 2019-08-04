@@ -1,5 +1,5 @@
 """Starts web server, sets URL and renders CUI."""
-from flask import Flask, render_template, url_for
+from flask import Flask, render_template
 
 app = Flask(__name__)
 

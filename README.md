@@ -4,9 +4,9 @@
 
 NLP service for SwiftOps (Work-in-progress)
 
-# Getting started
+## Getting started
 
-## Prerequisites
+### Prerequisites
 
 Install prerequesists by executing following command
 
@@ -14,18 +14,18 @@ Install prerequesists by executing following command
 python -m pip install -r requirements.txt
 ```
 
-## Configuration
+### Configuration
 
 Update following configuration files as per your dialog flow needs or start with templates given.
-* train_model/stories.md
-* train_model/domain.yml
-* train_model/nlu.md
+*   train_model/stories.md
+*   train_model/domain.yml
+*   train_model/nlu.md
 
 Configure credentials for your prefered conversation channel
 Note; We have given example of Slack, as well as Bot UI, more on the way
-* train_model/credentials.yml
+*   train_model/credentials.yml
 
-## Training 
+### Training 
 
 train models using folling command
 
@@ -52,7 +52,7 @@ You can start the server with ither command line utility or start using bot/bot_
 ./start_core.sh
 ```
 
-### using python
+### using python command
 
 ```shell
 python service.py
@@ -70,8 +70,6 @@ Configure Forwarding url in Slack API.
 open your slack client and enjoy your conversation.
 
 ## Starting Conversation UI
-
-### using python
 
 ```shell
 python chat_ui/conversation_interface.py
